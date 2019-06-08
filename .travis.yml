@@ -6,5 +6,9 @@ language: r
 sudo: false
 cache: packages
 
+jobs:
+  include:
+  - r: oldrel
+
 after_success:
   - Rscript -e 'covr::codecov()'
